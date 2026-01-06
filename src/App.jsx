@@ -1,9 +1,24 @@
 import Header from "./components/Header.jsx";
+import MerchantCard from "./components/MerchantCard.jsx";
 
 function App() {
     return (<>
         <Header/>
-        <h1 className="font-bold text-blue-600 text-center mt-6">Snackbox UI</h1>
+        <main className="mx-8">
+            <h1 className="font-bold text-3xl my-6">Restaurants</h1>
+            <section className="grid grid-cols-4 gap-2">
+                <MerchantCard />
+                <MerchantCard />
+                <MerchantCard />
+                <MerchantCard />
+                <MerchantCard />
+                <MerchantCard />
+                <MerchantCard />
+                <MerchantCard />
+                <MerchantCard />
+                <MerchantCard />
+            </section>
+        </main>
     </>);
 }
 
