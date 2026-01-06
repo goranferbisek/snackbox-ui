@@ -6,11 +6,13 @@ import App from './App.jsx'
 import Home from "./components/pages/Home.jsx"
 import Login from "./components/pages/Login.jsx"
 import Signup from "./components/pages/Signup.jsx";
+import ErrorPage from "./components/pages/ErrorPage.jsx";
 
 const appRouter = createBrowserRouter([
     {
         path: "/",
         element: <App/>,
+        errorElement: <ErrorPage/>,
         children: [
             {
                 index: true,
