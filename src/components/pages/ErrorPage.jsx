@@ -3,6 +3,14 @@ import Header from "../Header.jsx";
 
 export default function ErrorPage() {
     const routeError = useRouteError();
+    let errorTitle = "Something went wrong";
+    let errorMessage = "An unexpected error occurred. Please try again later.";
+
+    if (routeError) {
+        errorTitle = routeError.status;
+        errorMessage = routeError.data;
+
+    }
 
     if (routeError.status === 404) {
         return (<>
@@ -13,7 +21,7 @@ export default function ErrorPage() {
 
     return (<>
         <Header/>
-        <h1>{routeError.status}</h1>
-        <p>{routeError.data}</p>
+        <h1>{errorTitle}</h1>
+        <p>{errorMessage}</p>
     </>);
 }
